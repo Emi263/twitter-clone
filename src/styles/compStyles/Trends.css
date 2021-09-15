@@ -1,0 +1,109 @@
+.Trends {
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 90vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Trends .search {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 90%;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  border: 1px solid #25bf63;
+  position: relative;
+  -webkit-transform: translateX(40px);
+          transform: translateX(40px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Trends .search input {
+  outline: none;
+  border: none;
+  padding: 0.5rem 1.8rem;
+}
+
+.Trends .search .search-icon {
+  position: absolute !important;
+  color: #7d8a94 !important;
+}
+
+.Trends .trends-for-you {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.Trends .who-to-follow {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.Trends .who-follow {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+.Trends .messages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: bolder;
+  font-size: large;
+}
+
+.Trends .messages .icons {
+  color: #25bf63 !important;
+}
+
+.follow-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #25bf63;
+  border: 1px solid #25bf63;
+  padding: 0.4rem 0.7rem;
+  border-radius: 20px;
+  font-weight: bolder;
+}
+/*# sourceMappingURL=Trends.css.map */

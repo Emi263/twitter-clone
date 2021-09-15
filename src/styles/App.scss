@@ -1,0 +1,29 @@
+@import "./partials/variables";
+@import "./compStyles/Posts.scss";
+@import "./compStyles/Sidebar.scss";
+@import "./compStyles/Trends.scss";
+@import "./compStyles/login.scss";
+
+.App {
+  box-sizing: border-box;
+  margin-top: 9px;
+  display: grid;
+  grid-template-columns: 25% 42% 33%;
+  padding: 0 60px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+}
+
+@media screen and (max-width: 900px) {
+  .Sidebar {
+    display: none;
+  }
+  .Trends {
+    display: none;
+  }
+  .App {
+    grid-template-columns: 1fr;
+    padding: 1rem 1rem;
+  }
+}

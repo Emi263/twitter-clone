@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/App.css";
+import React from "react";
+import Sidebar from "./components/Sidebar";
+import Posts from "./components/Posts";
+import Trends from "./components/Trends";
+import LogIn from "./components/LogIn";
+import { GlobalContext } from "./store/GlobalProvider";
 
 function App() {
+  const { user } = React.useContext(GlobalContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {user ? (
+        <>
+          <div className="App">
+            <Sidebar />
+            <Posts />
+            <Trends />
+          </div>
+        </>
+      ) : (
+        <LogIn />
+      )}
+    </>
   );
 }
 

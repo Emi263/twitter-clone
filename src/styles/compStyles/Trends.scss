@@ -1,0 +1,70 @@
+@import "../partials/variables";
+
+.Trends {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  height: 90vh;
+  flex-direction: column;
+
+  .search {
+    box-sizing: border-box;
+    width: 90%;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    border: 1px solid $active-link;
+    position: relative;
+    transform: translateX(40px);
+    input {
+      outline: none;
+      border: none;
+      padding: 0.5rem 1.8rem;
+    }
+    .search-icon {
+      position: absolute !important;
+      color: $footer-icons !important;
+    }
+    display: flex;
+    align-items: center;
+  }
+  .trends-for-you {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: large;
+  }
+  .who-to-follow {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: large;
+  }
+  .who-follow {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .messages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bolder;
+    font-size: large;
+
+    .icons {
+      color: $active-link !important;
+    }
+  }
+}
+
+.follow-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $active-link;
+  border: 1px solid $active-link;
+  padding: 0.4rem 0.7rem;
+  border-radius: 20px;
+  font-weight: bolder;
+}
