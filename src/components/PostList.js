@@ -28,6 +28,7 @@ function PostList() {
             userAddress={user.email}
             username={user.displayName}
             userImg={user.photoURL || noUserImg}
+            time={post.createdAt}
           />
         ))}
     </div>

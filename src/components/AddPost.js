@@ -50,7 +50,12 @@ function AddPost() {
       )}
       {selected && (
         <h4
-          style={{ marginTop: `10px`, margin: "0 auto", textAlign: "center" }}
+          style={{
+            marginTop: `10px`,
+            margin: "0 auto",
+            textAlign: "center",
+            padding: "1rem",
+          }}
         >
           You selected image {selected.name}{" "}
         </h4>
@@ -90,7 +95,6 @@ function AddPost() {
           <button
             onClick={() => {
               setClicked(true);
-              setTxtAreaVal("");
             }}
             className={txtAreaVal.length > 0 ? "" : "disable"}
             disabled={txtAreaVal.length > 0 ? false : true}
@@ -101,7 +105,12 @@ function AddPost() {
       </div>
 
       {clicked && selected && (
-        <Progress val={txtAreaVal} file={selected} setFile={setSelected} />
+        <Progress
+          val={txtAreaVal}
+          file={selected}
+          setFile={setSelected}
+          setTxtAreaVal={setTxtAreaVal}
+        />
       )}
     </div>
   );
@@ -109,10 +118,11 @@ function AddPost() {
 
 export default AddPost;
 
-function Progress({ file, setFile, val }) {
+function Progress({ file, setFile, val, setTxtAreaVal }) {
   const { url, progress } = useStorage(file, val);
 
   useEffect(() => {
+    setTxtAreaVal("");
     if (url) {
       setFile(null);
     }

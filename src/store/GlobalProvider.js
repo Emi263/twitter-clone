@@ -28,6 +28,7 @@ export const GlobalProvider = ({ children }) => {
   const signInGoogle = () => {
     auth.signInWithPopup(provider).then((result) => {
       setCurrentUser(result.user);
+      console.log(result.user);
     });
   };
   function signOut() {

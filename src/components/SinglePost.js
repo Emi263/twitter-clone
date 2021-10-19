@@ -1,25 +1,28 @@
 import React from "react";
-import userImg from "../images/user.png";
-import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
-import Img from "../images/img.jpg";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import RepeatIcon from "@material-ui/icons/Repeat";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import PublishOutlinedIcon from "@material-ui/icons/PublishOutlined";
-function SinglePost({ postedImg, caption, userImg, username, userAddress }) {
+import Moment from "react-moment";
+import "moment-timezone";
+function SinglePost({
+  postedImg,
+  caption,
+  userImg,
+  username,
+  userAddress,
+  time,
+}) {
   return (
     <div className="SinglePost">
       <div className="single-post-header">
         <img src={userImg} alt="" />
         <div className="credentials">
           <span style={{ fontWeight: "bold", fontSize: `15px` }}>
-            {username.split(" ")[0]}
+            {username?.split(" ")[0]}
           </span>
           <span style={{ color: `rgb(124, 115, 115)`, fontSize: `15px` }}>
             @{userAddress}
-          </span>
-          <span style={{ color: `rgb(124, 115, 115)`, fontSize: `15px` }}>
-            · 2m
           </span>
         </div>
       </div>
